@@ -1,0 +1,58 @@
+FORMAT: 1A
+HOST: https://snippet.io/
+
+# Snippet.io
+
+성냥팔이 소년들을 위한 깜찍한 API
+
+# Group 인증 관련
+## Authorizations [/auth]
+
+### Login [GET /auth/github/login{?redirect}]
++ Attribute
+    + redirect (string, required) - 로그인 후 리다이렉트될 URL
+
++ Response 302
+
++ Response 400
+
+        {
+            "message": "올바르지 않는 입력값입니다."
+        }
+
+### Get Access Token [GET /auth/github/access_token{?code}]
++ Attribute
+    + code (string, required) - github 로그인 후 쿼리로 받은 code 값
+
++ Response 200 (application/json)
+
+        {
+            "access_token": "Bearer 토큰값"
+        }
+
++ Response 400
+    
+        {
+            "message": "올바르지 않는 입력값입니다."
+        }
+
++ Response 401
+
+        {
+            "message": "해당 code값으로 인증할 수 없습니다."
+        }
+        
+# Group 코드 스니펫 관련
+## 코드 스니펫 [/code]
+
+### Create Code [POST]
++ Attribute
+    + title (string, required)
+    + content (string, required)
+    
++ Request (application/json)
+    + header
+        
+            Authorization: Bearer 토큰토큰
+
++ Response 201
