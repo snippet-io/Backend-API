@@ -9,7 +9,7 @@ HOST: https://snippet.io/
 ## Authorizations [/auth]
 
 ### Login [GET /auth/github/login{?redirect}]
-+ Attribute
++ Parameters
     + redirect (string, required) - 로그인 후 리다이렉트될 URL
 
 + Response 302
@@ -21,7 +21,7 @@ HOST: https://snippet.io/
         }
 
 ### Get Access Token [GET /auth/github/access_token{?code}]
-+ Attribute
++ Parameters
     + code (string, required) - github 로그인 후 쿼리로 받은 code 값
 
 + Response 200 (application/json)
