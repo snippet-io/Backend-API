@@ -20,8 +20,8 @@ HOST: https://snippet.io/
             "message": "올바르지 않는 입력값입니다."
         }
 
-### Get Access Token [GET /auth/github/accesstoken{?code}]
-+ Parameters
+### Issue Access Token [POST /auth/github/accesstoken{?code}]
++ Attribute
     + code (string, required) - github 로그인 후 쿼리로 받은 code 값
 
 + Response 200 (application/json)
