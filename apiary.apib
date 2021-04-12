@@ -62,10 +62,32 @@ HOST: http://diarystory.site/
             Authorization: 토큰토큰
 
 + Response 201
++ Response 400
+
+### Modify Code [PUT]
++ Attribute
+    + title (string, required)
+    + content (string, required)
+    + language (string, required)
+    + description (string)
+    
++ Request (application/json)
+    + header
+        
+            Authorization: 토큰토큰
+
++ Response 200
++ Response 400
++ Response 404
 
 ### Delete Code [DELETE /code/{id}]
 + Parameters
     + id (number, required) - code id
+
++ Request (application/json)
+    + header
+        
+            Authorization: 토큰토큰
 
 + Response 200
 + Response 404
