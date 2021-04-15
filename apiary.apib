@@ -64,6 +64,23 @@ HOST: http://diarystory.site/
 + Response 201
 + Response 400
 
+### Get code list [GET /codes]
++ Request (application/json)
+    + header 
+        
+            Authorization: 토큰토큰
++ Response 200 (application/json)
+    
+        [
+            {
+                "id": 1,
+                "title": "코드",
+                "content": "내용",
+                "language": "rust",
+                "description": "설명"
+            }
+        ]
+
 ### Modify Code [PUT /code/{id}]
 + Parameters
     + id (number, required) - code id
