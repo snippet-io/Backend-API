@@ -64,7 +64,11 @@ HOST: http://diarystory.site/
 + Response 201
 + Response 400
 
-### Get code list [GET /codes]
+### Get code list [GET /codes{?limit,offset}]
++ Parameters
+    + limit (number, required)
+    + offset (number, required)
+
 + Request (application/json)
     + header 
         
