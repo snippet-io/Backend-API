@@ -87,6 +87,9 @@ HOST: http://diarystory.site/
             }
         ]
         
++ Response 400
++ Response 403
+        
 ### Get code [GET /codes/{id}]
 + Parameters
     + id (number, required) - code id
@@ -106,6 +109,10 @@ HOST: http://diarystory.site/
             "author": "작성자 id",
             "created_datetime": "YYYY-MM-DDTHH:MM:SS.sss+09:00 - 생성된 시간, ISO 8601표준을 따름"
         }
+        
++ Response 400
++ Response 403
++ Response 404
 
 
 ### Modify Code [PUT /codes/{id}]
