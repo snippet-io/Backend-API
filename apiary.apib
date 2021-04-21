@@ -86,6 +86,27 @@ HOST: http://diarystory.site/
                 "created_datetime": "YYYY-MM-DDTHH:MM:SS.sss+09:00 - 생성된 시간, ISO 8601표준을 따름"
             }
         ]
+        
+### Get code [GET /codes/{id}]
++ Parameters
+    + id (number, required) - code id
+
++ Request (application/json)
+    + header 
+        
+            Authorization: 토큰토큰
++ Response 200 (application/json)
+    
+        {
+            "id": 1,
+            "title": "코드",
+            "content": "내용",
+            "language": "rust",
+            "description": "설명",
+            "author": "작성자 id",
+            "created_datetime": "YYYY-MM-DDTHH:MM:SS.sss+09:00 - 생성된 시간, ISO 8601표준을 따름"
+        }
+
 
 ### Modify Code [PUT /codes/{id}]
 + Parameters
