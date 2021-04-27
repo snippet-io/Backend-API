@@ -31,7 +31,8 @@ HOST: http://diarystory.site/
 + Response 200 (application/json)
 
         {
-            "access_token": "토큰값"
+            "access_token": "토큰값",
+            "id": "유저의 id"
         }
 
 + Response 400
@@ -165,3 +166,27 @@ HOST: http://diarystory.site/
 + Response 200
 + Response 403
 + Response 404
+
+# Group 유저 관련
+## 유저의 코드 [/users/{id}/codes]
++ Parameters
+    + id (number, required) - 유저 식별자
+### Get User's codes [GET]
++ Request (application/json)
+    + header
+        
+            Authorization: 토큰토큰
+            
++ Response 200
+    
+        [
+            {
+                "id": 1,
+                "title": "코드",
+                "content": "내용",
+                "language": "rust",
+                "description": "설명",
+                "author": "작성자 id",
+                "created_datetime": "YYYY-MM-DDTHH:MM:SS.sss+09:00 - 생성된 시간, ISO 8601표준을 따름"
+            }
+        ]
