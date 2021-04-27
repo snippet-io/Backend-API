@@ -168,6 +168,19 @@ HOST: http://diarystory.site/
 + Response 404
 
 # Group 유저 관련
+## 유저 [/users]
+### Get User [GET /users/{id}]
++ Parameters
+    + id (number, required) - 유저 id
+
++ Response 200 (application/json)
+
+        {
+            "id": 1,
+            "name": "jungwoo",
+            "profile_image_url": "https://avatars.githubusercontent.com/u/44115353?v=4"
+        }
+    
 ## 유저의 코드 [/users/{id}/codes]
 + Parameters
     + id (number, required) - 유저 식별자
