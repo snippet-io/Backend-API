@@ -225,3 +225,24 @@ HOST: http://diarystory.site/
                 "created_datetime": "YYYY-MM-DDTHH:MM:SS.sss+09:00 - 생성된 시간, ISO 8601표준을 따름"
             }
         ]
+
+### Get stared code by user [GET /user/{id}/staring/codes]
++ Parameters
+    + id (number, required) - 유저 식별자
++ Request (application/json)
+    + header
+        
+            Authorization: 토큰토큰
++ Response 200
+    
+        [
+            {
+                "id": 1,
+                "title": "코드",
+                "content": "내용",
+                "language": "rust",
+                "description": "설명",
+                "author": "작성자 id",
+                "created_datetime": "YYYY-MM-DDTHH:MM:SS.sss+09:00 - 생성된 시간, ISO 8601표준을 따름"
+            }
+        ]
