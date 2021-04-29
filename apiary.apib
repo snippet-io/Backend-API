@@ -88,6 +88,17 @@ HOST: http://diarystory.site/
 + Response 400
 + Response 403
 
+### Star the code [POST /codes/{id}/stars]
++ Parameters
+    + id (number, required) - code id
++ Request (application/json)
+    + header
+        
+            Authorization: 토큰토큰
++ Response 200
++ Response 403
++ Response 404
+
 ### Search codes for title and content [GET /codes{?limit,offset,search}]
 + Parameters
     + limit (number, required)
