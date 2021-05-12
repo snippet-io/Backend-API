@@ -65,34 +65,13 @@ HOST: http://diarystory.site/
 + Response 201
 + Response 400
 
-### Get code list [GET /codes{?limit,offset,language}]
+### Search codes [GET /codes{?limit,offset,search,language,order}]
 + Parameters
     + limit (number, required)
     + offset (number, required)
-    + language (string, optional) - 언어로 필터링시 사용
-    
-+ Response 200 (application/json)
-    
-        [
-            {
-                "id": 1,
-                "title": "코드",
-                "content": "내용",
-                "language": "rust",
-                "description": "설명",
-                "author": "작성자 id",
-                "created_datetime": "YYYY-MM-DDTHH:MM:SS.sss+09:00 - 생성된 시간, ISO 8601표준을 따름"
-            }
-        ]
-        
-+ Response 400
-+ Response 403
-
-### Search codes for title and content [GET /codes{?limit,offset,search}]
-+ Parameters
-    + limit (number, required)
-    + offset (number, required)
-    + search (string, required) - 검색어
+    + search (string, optional) - 검색어(title과 content 중에서 검색)
+    + language (string, optional) - 언어 필터링
+    + order (string, optional) - 정렬(가능한 값: stars)
 
 + Response 200 (application/json)
 
